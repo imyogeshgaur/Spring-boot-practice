@@ -17,8 +17,10 @@ public class DemoApplication {
 		String Name = s.getName();
 		String Email = s.getEmail();
 		int RollNo = s.getRollNo();
+		String school = s.showSchool();
 		System.out.println(Name);
 		System.out.println(Email);
 		System.out.println(RollNo);
+		System.out.println(school);
 	}
 }
