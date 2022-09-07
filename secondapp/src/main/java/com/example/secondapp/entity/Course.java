@@ -11,4 +11,22 @@ public class Course {
         this.courseName = cname;
         this.courseDesc = cdesc;
     }
+    public long getCouresId() {
+        return couresId;
+    }
+    public void setCouresId(long couresId) {
+        this.couresId = couresId;
+    }
+    public String getCourseDesc() {
+        return courseDesc;
+    }
+    public void setCourseDesc(String courseDesc) {
+        this.courseDesc = courseDesc;
+    }
+    public String getCourseName() {
+        return courseName;
+    }
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
 }
