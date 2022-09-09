@@ -9,13 +9,10 @@ import com.example.fifthapp.service.UserService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
-
-
-
 
 @RestController
 @Component
@@ -33,13 +30,13 @@ public class UserContoller {
         return this.userService.createUser(entity.name, entity.email, entity.password, entity.location);
     }
 
-    @PutMapping(value = "/users/")
-    public User putMethodName(@RequestBody User entity){
-        return this.userService.updateUser(2,entity.name);
+    @PutMapping(value = "/users/{userId}")
+    public User putMethodName(@RequestBody User entity,@PathVariable("userId") int uId){
+        return this.userService.updateUser(uId,entity.name);
     }
 
-    @DeleteMapping(value = "/users/")
-    public String deleteMethod(@RequestBody int uId){
+    @DeleteMapping(value = "/users/{userId}")
+    public String deleteMethod(@PathVariable("userId") int uId){
         return this.userService.deleteUser(uId);
     }    
     
