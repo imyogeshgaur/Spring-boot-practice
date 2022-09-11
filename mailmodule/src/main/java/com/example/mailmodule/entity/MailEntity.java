@@ -12,8 +12,8 @@ public class MailEntity{
     private String reciver;
     private String messageBody;
     private String subjectOfMail;
+    private String attachmentOfMail;
     
-
     public void setReciver(String reciever){
          this.reciver = reciever;
     }
@@ -23,6 +23,9 @@ public class MailEntity{
     public void setSubjectOfBody(String subjectOfMail){
          this.subjectOfMail= subjectOfMail;
     }
+    public void setAttachmentOfMail(String attachmentOfMail){
+            this.attachmentOfMail = attachmentOfMail;
+    }
     public String getReciver(){
         return reciver;
     }
@@ -31,5 +34,8 @@ public class MailEntity{
     }
     public String getSubjectOfBody(){
         return subjectOfMail;
+    }
+    public String getAttachmentOfMail(){
+        return attachmentOfMail;
     }
 }

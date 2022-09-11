@@ -15,8 +15,13 @@ public class MailContoller {
     @Autowired
     private MailServices mailService;
     @PostMapping(value="/mail")
-    public String postMethodName(@RequestBody MailEntity entity) {
+    public String postMail(@RequestBody MailEntity entity) {
         String status = mailService.sendMail(entity);
+        return status;
+    }
+    @PostMapping(value="/mailAttach")
+    public String postAttachement(@RequestBody MailEntity entity) {
+        String status = mailService.sendAttachment(entity);
         return status;
     }
     
